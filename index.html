@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/VaccineFavicon.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBlue: '#3757D5',
+                        greyBlue: '#EEF3FF',
+                        fontBlue: '#1F3E72',
+                        fontGrey: '#7F8CA1',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <header>
+        <!-- Navbar -->
+        <nav class="bg-white/90 flex flex-wrap justify-between items-center p-4 md:p-12 xl:m-0 w-full">
+            <a href="/" class="text-primaryBlue text-3xl font-bold">Vaccination</a>
+            <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-fontGrey rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="hidden w-full lg:block lg:w-auto self-center" id="mobile-menu">
+                <ul class="flex gap-x-4 flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <li>
+                        <a href="#" class="text-xl font-semibold block py-2 pr-6 pl-5 text-fontGrey border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primaryBlue md:p-0 ">Database</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-xl font-semibold block py-2 pr-6 pl-5 text-fontGrey border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primaryBlue md:p-0 ">Education</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-xl font-semibold block py-2 pr-6 pl-5 text-fontGrey border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primaryBlue md:p-0 ">News</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-xl font-semibold block py-2 pr-6 pl-5 text-fontGrey hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-primaryBlue md:p-0 d">Regulation</a>
+                    </li>
+                    <li class="hover:scale-110 transition ease-in-out delay-50">
+                        <a href="#" class="text-xl font-semibold py-2 px-4 shadow-md shadow-primaryBlue text-white bg-primaryBlue rounded">Hoax Buster</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Hero -->
+        <section class="grid md:-mt-32 grid-rows lg:grid-cols-2">
+            <!-- Hero Description -->
+            <article class=" -z-10 md:mt-20 lg:mt-28 p-8 md:p-12 lg:px-32 lg:py-18 h-fit">
+                <h1 class="text-fontBlue text-[48px] md:text-[54px] xl:text-[68px] font-bold text-center lg:text-left">Fight Virus<br> With Vaccines</h1>
+                <p class="text-xl text-fontGrey font-medium leading-8 mt-4 text-center lg:text-left">Let's stop this pandemic by killing the virus with a vaccine, don't let yourself and your family get infected</p>
+                <div class="flex justify-evenly mt-4">
+                    <div class="flex-1">
+                        <img class="inline w-6 bg-yellow-500/20 shadow-lg shadow-yellow-500/20 p-1 rounded" src="icons/shield.svg" alt="Shield Icon">
+                        <p class="inline text-fontBlue font-medium ml-2">Best Protection</p>
+                    </div>
+                    <div class="flex-1">
+                        <img class="inline w-6 bg-yellow-500/20 shadow-lg shadow-yellow-500/20 p-1 rounded" src="icons/star.svg" alt="Star Icon">
+                        <p class="inline text-fontBlue font-medium ml-2">Selected Vaccines</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center sm:text-left">
+                    <img class="inline w-6 bg-blue-500/20 shadow-lg shadow-blue-500/20 p-1 rounded" src="icons/clock.svg" alt="Clock Icon">
+                    <p class="inline text-fontBlue font-semibold ml-2 text-xl">Schedule your Vaccinations</p>
+                </div>
+                <!-- Form -->
+                <article class="lg:w-[1100px] h-min col-span-2 bg-white/90 p-8 rounded shadow-lg shadow-blue-500/20">
+                    <form class="flex flex-col lg:flex-row" action="">
+                        <article >
+                            <div class="">
+                                <img class="inline w-6 bg-blue-500/20 shadow-lg shadow-blue-500/20 p-1 rounded" src="icons/location.svg" alt="Location Icon">
+                                <label class="inline text-fontBlue font-medium ml-2" for="location">Location</label>
+                                <input class="pl-8 block font-medium text-xl w-[250px]" type="text" id="location" placeholder="Jakarta Utara">
+                            </div>
+                        </article>
+                        <article>
+                            <div class="">
+                                <img class="inline w-6 bg-blue-500/20 shadow-lg shadow-blue-500/20 p-1 rounded" src="icons/calendar.svg" alt="Calendar Icon">
+                                <label class="inline text-fontBlue font-medium ml-2" for="date">Date</label>
+                                <input class="pl-8 block text-fontBlue font-medium text-xl w-[250px]" type="date" id="date" placeholder="Jakarta Utara">
+                            </div>
+                        </article>
+                        <article class="lg:ml-8">
+                            <div class="">
+                                <img class="inline w-6 bg-blue-500/20 shadow-lg shadow-blue-500/20 p-1 rounded" src="icons/pencil.svg" alt="Pencil Icon">
+                                <label class="inline text-fontBlue font-medium ml-2" for="vaccine-type">Vaccine Type</label>
+                                <select class="lg:pl-8 block text-fontBlue font-medium text-xl w-[250px]" type="select" id="vaccine-type" placeholder="Jakarta Utara">
+                                    <option value="">Select Vaccine</option>
+                                    <option value="">Vaccine 1</option>
+                                    <option value="">Vaccine 2</option>
+                                    <option value="">Vaccine 3</option>
+                                </select>
+                            </div>
+                        </article>
+                        <input class="block text-xl font-semibold py-4 px-10 ml-8 shadow-md shadow-primaryBlue text-white bg-primaryBlue rounded hover:scale-110 transition ease-in-out delay-50" type="submit" value="Submit">
+                        
+                    </form>
+                </article>
+            </article>
+            <!-- Hero Image -->
+            <img class="[position:static] bg-cover bg-center [width:-webkit-fill-available] -z-40 sm:-mt-[160px] md:-mt-[80px] lg:mt-0" src="images/Nurse1.png" alt="Nurse 1">
+        </section>
+    </header>
+    <main>
+        <!-- Vaccines -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-24 my-14">
+            <img class="h-32 mx-auto" src="images/AztraZeneca.png" alt="AztraZeneca">
+            <img class="h-32 mx-auto" src="images/SINOVAC.png" alt="SINOVAC">
+            <img class="h-32 mx-auto" src="images/Pfizer.png" alt="Pfizer">
+            <img class="h-32 mx-auto" src="images/moderna.png" alt="moderna">
+        </section>
+        <!-- Why should i vaccine? -->
+        <section class="mx-[50px] lg:mx-[100px] lg:mt-24">
+            <h2 class="text-3xl lg:text-5xl text-fontBlue font-bold my-8 lg:my-12 text-center lg:text-left">Why should I vaccine?</h2>
+            <p class="text-fontGrey text-lg lg:text-xl font-medium text-center lg:text-left lg:w-[50%] leading-10 mb-12">In order to avoid any doubts about getting the COVID-19 vaccine, identify the following 4 benefits of COVID-19 vaccination:</p>
+            <article class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="border-solid border-2 border-gray-200/50 rounded p-8">
+                    <img class="h-16 w-16 bg-blue-500/10 shadow-lg shadow-blue-500/10 p-4 rounded mb-4" src="icons/filter.svg" alt="Filter Icon">
+                    <h3 class="text-fontBlue font-semibold text-xl py-4">Minimize the spread of viruses</h3>
+                    <p class="text-fontGrey font-medium text-md">Vaccine has been proven effective to prevent someone from getting infected with Coronavirus</p>
+                </div>
+                <div class="border-solid border-2 border-gray-200/50 rounded p-8">
+                    <img class="h-16 w-16 bg-blue-500/10 shadow-lg shadow-blue-500/10 p-4 rounded mb-4" src="icons/shield-blue.svg" alt="Blue Shield Icon">
+                    <h3 class="text-fontBlue font-semibold text-xl py-4">Minimize the spread of viruses</h3>
+                    <p class="text-fontGrey font-medium text-md">Vaccine has been proven effective to prevent someone from getting infected with Coronavirus</p>
+                </div>
+                <div class="border-solid border-2 border-gray-200/50 rounded p-8">
+                    <img class="h-16 w-16 bg-blue-500/10 shadow-lg shadow-blue-500/10 p-4 rounded mb-4" src="icons/people.svg" alt="People Icon">
+                    <h3 class="text-fontBlue font-semibold text-xl py-4">Minimize the spread of viruses</h3>
+                    <p class="text-fontGrey font-medium text-md">Vaccine has been proven effective to prevent someone from getting infected with Coronavirus</p>
+                </div>
+                <div class="border-solid border-2 border-gray-200/50 rounded p-8">
+                    <img class="h-16 w-16 bg-blue-500/10 shadow-lg shadow-blue-500/10 p-4 rounded mb-4" src="icons/chart.svg" alt="Chart Icon">
+                    <h3 class="text-fontBlue font-semibold text-xl py-4">Minimize the spread of viruses</h3>
+                    <p class="text-fontGrey font-medium text-md">Vaccine has been proven effective to prevent someone from getting infected with Coronavirus</p>
+                </div>
+            </article>
+        </section>
+        <!-- Preparations before vaccine -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 mt-[50px] lg:mt-[100px]">
+            <img class="w-full bg-fixed" src="images/Vaccinated.png" alt="Vaccinated Girl">
+            <article class="mx-[100px]">
+                <h2 class="text-3xl lg:text-5xl text-fontBlue font-bold my-12 lg:my-8 text-center lg:text-left">Preparations Before Vaccine</h2>
+                <p class="text-fontGrey text-lg lg:text-xl font-medium text-center lg:text-left leading-10 mb-12">the success of vaccines is strongly influenced by the strength of the body's immune system. Therefore, there are several things that can be tried to make the COVID-19 vaccine work:</p>
+                <section>
+                    <article class="flex justify-between border-solid border-2 border-gray-200/50 rounded p-5 items-center lg:mr-20 mb-5">
+                        <div>
+                            <img class="inline w-8 h-8 bg-blue-500/20 p-1.5 rounded" src="icons/shield-blue.svg" alt="Blue Shield Icon">
+                            <p class="inline text-fontBlue font-medium ml-2 text-lg">Avoid alcoholic beverages</p>
+                        </div>
+                        <img class="inline w-[20px] h-[20px] p-[6px] rounded bg-blue-500/20"src="icons/down-arrow.svg" alt="Down Arrow Icon">
+                    </article>
+                    <article class="flex justify-between border-solid border-2 border-gray-200/50 rounded p-5 items-center lg:mr-20 mb-5">
+                        <div>
+                            <img class="inline w-8 h-8 bg-blue-500/20 p-1.5 rounded" src="icons/x.svg" alt="X Icon">
+                            <p class="inline text-fontBlue font-medium ml-2 text-lg">Avoid stress</p>
+                        </div>
+                        <img class="inline w-[20px] h-[20px] p-[6px] rounded bg-blue-500/20"src="icons/down-arrow.svg" alt="Down Arrow Icon">
+                    </article>
+                    <article class="flex justify-between border-solid border-2 border-gray-200/50 rounded p-5 items-center lg:mr-20 mb-5">
+                        <div>
+                            <img class="inline w-8 h-8 bg-blue-500/20 p-1.5 rounded" src="icons/chart-background.svg" alt="Background Chart Icon">
+                            <p class="inline text-fontBlue font-medium ml-2 text-lg">Eat healthy food</p>
+                        </div>
+                        <img class="inline w-[20px] h-[20px] p-[6px] rounded bg-blue-500/20"src="icons/down-arrow.svg" alt="Down Arrow Icon">
+                    </article>
+                    <article class="flex justify-between border-solid border-2 border-gray-200/50 rounded p-5 items-center lg:mr-20 mb-5">
+                        <div>
+                            <img class="inline w-8 h-8 bg-blue-500/20 p-1.5 rounded" src="icons/check.svg" alt="Check Icon">
+                            <p class="inline text-fontBlue font-medium ml-2 text-lg">Get enough sleep</p>
+                        </div>
+                        <img class="inline w-[20px] h-[20px] p-[6px] rounded bg-blue-500/20"src="icons/down-arrow.svg" alt="Down Arrow Icon">
+                    </article>
+                    <article class="flex justify-between border-solid border-2 border-gray-200/50 rounded p-5 items-center lg:mr-20 mb-5">
+                        <div>
+                            <img class="inline w-8 h-8 bg-blue-500/20 p-1.5 rounded" src="icons/heart.svg" alt="Heart Icon">
+                            <p class="inline text-fontBlue font-medium ml-2 text-lg">Excercise or physical activity</p>
+                        </div>
+                        <img class="inline w-[20px] h-[20px] p-[6px] rounded bg-blue-500/20"src="icons/down-arrow.svg" alt="Down Arrow Icon">
+                    </article>
+                </section>
+            </article>
+            
+        </section>
+        <!-- Emergency Contact -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 my-[50px] lg:my-[100px]">
+            <article class="mx-[100px]">
+                <h2 class="text-3xl lg:text-5xl text-fontBlue font-bold my-8 lg:my-12 text-center lg:text-left">Emergency Contact</h2>
+                <p class="text-fontGrey text-lg lg:text-xl font-medium text-center lg:text-left leading-10 mb-12">Contact one of the contacts below if you or your family feel unwell and have similar symptoms such as Covid-19, make sure you also take care of yourself before reporting to us:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="border-solid border-2 border-gray-200/50 rounded p-8">
+                        <div class="flex">
+                            <img class="self-center h-16 w-16 bg-blue-500/10 p-4 rounded" src="icons/filter.svg" alt="Filter Icon">
+                            <div class="ml-4">
+                                <h3 class="text-fontBlue font-medium text-xl py-1">Call</h3>
+                                <p class="text-fontGrey font-medium text-md">021.123.145.14</p>
+                            </div>
+                        </div>
+                        <button class="block text-lg font-semibold text-center mx-auto mt-8 py-4 px-6 w-full text-primaryBlue bg-blue-50 hover:shadow-md hover:shadow-primaryBlue hover:text-white hover:bg-primaryBlue rounded hover:scale-105 transition ease-in-out delay-50">Call Now</button>
+                    </div>
+                    <div class="border-solid border-2 border-gray-200/50 rounded p-8">
+                        <div class="flex">
+                            <img class="self-center h-16 w-16 bg-blue-500/10 p-4 rounded" src="icons/filter.svg" alt="Filter Icon">
+                            <div class="ml-4">
+                                <h3 class="text-fontBlue font-medium text-xl py-1">Chat</h3>
+                                <p class="text-fontGrey font-medium text-md">021.123.145.14</p>
+                            </div>
+                        </div>
+                        <button class="block text-lg font-semibold text-center mx-auto mt-8 py-4 px-6 w-full text-primaryBlue bg-blue-50 hover:shadow-md hover:shadow-primaryBlue hover:text-white hover:bg-primaryBlue rounded hover:scale-105 transition ease-in-out delay-50">Chat Now</button>
+                    </div>
+                    <div class="border-solid border-2 border-gray-200/50 rounded p-8">
+                        <div class="flex">
+                            <img class="self-center h-16 w-16 bg-blue-500/10 p-4 rounded" src="icons/filter.svg" alt="Filter Icon">
+                            <div class="ml-4">
+                                <h3 class="text-fontBlue font-medium text-xl py-1">Video Call</h3>
+                                <p class="text-fontGrey font-medium text-md">021.123.145.14</p>
+                            </div>
+                        </div>
+                        <button class="block text-lg font-semibold text-center mx-auto mt-8 py-4 px-6 w-full text-primaryBlue bg-blue-50 hover:shadow-md hover:shadow-primaryBlue hover:text-white hover:bg-primaryBlue rounded hover:scale-105 transition ease-in-out delay-50">Video Call Now</button>
+                    </div>
+                    <div class="border-solid border-2 border-gray-200/50 rounded p-8">
+                        <div class="flex">
+                            <img class="self-center h-16 w-16 bg-blue-500/10 p-4 rounded" src="icons/filter.svg" alt="Filter Icon">
+                            <div class="ml-4">
+                                <h3 class="text-fontBlue font-medium text-xl py-1">Message</h3>
+                                <p class="text-fontGrey font-medium text-md">021.123.145.14</p>
+                            </div>
+                        </div>
+                        <button class="block text-lg font-semibold text-center mx-auto mt-8 py-4 px-6 w-full text-primaryBlue bg-blue-50 hover:shadow-md hover:shadow-primaryBlue hover:text-white hover:bg-primaryBlue rounded hover:scale-105 transition ease-in-out delay-50">Message Now</button>
+                    </div>
+                </div>
+            </article>
+            <img class="w-full bg-fixed" src="images/Nurse2.png" alt="Nurse 2">
+        </section>
+    </main>
+    <footer class="bg-[#EEF3FF] px-[50px] py-[25px] lg:px-[100px] lg:py-[50px]">
+        <!-- Links -->
+        <section class="flex flex-col lg:flex-row justify-between w-auto mb-16 items-center">
+            <article class="text-center lg:text-left lg:w-[200px]">
+                <a href="/" class="text-primaryBlue text-3xl font-bold">Vaccination</a>
+                <p class="text-fontGrey text-lg font-medium text-center lg:text-left leading-10 mb-12">Our goal is to help the world free from the ongoing pandemic</p>
+            </article>
+            <article>
+                <table class="table-auto text-left m-0">
+                    <tr>
+                        <th class="text-fontBlue text-xl lg:text-2xl font-bold py-2 px-5 lg:py-4 lg:px-10">About</th>
+                        <th class="text-fontBlue text-xl lg:text-2xl font-bold py-2 px-5 lg:py-4 lg:px-10">Company</th>
+                        <th class="text-fontBlue text-xl lg:text-2xl font-bold py-2 px-5 lg:py-4 lg:px-10">Support</th>
+                    </tr>
+                    <tr>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">About Us</td>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">How We Work?</td>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">FAQs</td>
+                    </tr>
+                    <tr>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">Features</td>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">Capital</td>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">Support Center</td>
+                    </tr>
+                    <tr>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">News & Blog</td>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">Security</td>
+                        <td class="text-fontGrey text-md lg:text-lg font-medium py-1 px-5 lg:py-2 lg:px-10">Contact Us</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <!-- Copyright -->
+        <section class="flex justify-between w-auto flex-col lg:flex-row">
+            <article>
+                <p class="text-fontGrey text-md lg:text-lg font-medium text-center lg:text-left leading-10">@2021 Vacinnation. All rights reserved</p>
+            </article>
+            <article class="flex gap-16 flex-col lg:flex-row">
+                <p class="text-fontGrey text-md lg:text-lg font-medium text-center lg:text-left leading-10">Terms & Agreements</p>
+                <p class="text-fontGrey text-md lg:text-lg font-medium text-center lg:text-left leading-10">Privacy Policy</p>
+            </article>
+        </section>
+    </footer>
+</body>
+</html>
